@@ -17,10 +17,10 @@
 CREATE TABLE IF NOT EXISTS snowplow_pivots.page_views (
   blended_user_id varchar(255) encode runlength,
   inferred_user_id varchar(255) encode runlength,
-  domain_userid varchar(16),
+  domain_userid varchar(36),
   domain_sessionidx smallint,
   page_urlhost varchar(255) encode text255,
-  page_urlpath varchar(1000) encode text32k,
+  page_urlpath varchar(3000) encode text32k,
   first_touch_tstamp timestamp,
   last_touch_tstamp timestamp,
   dvce_min_tstamp timestamp,

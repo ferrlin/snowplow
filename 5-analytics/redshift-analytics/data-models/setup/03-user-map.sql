@@ -15,7 +15,7 @@
 
 -- Create the snowplow_intermediary.cookie_id_to_user_id_map table (used for identity stitching):
 CREATE TABLE IF NOT EXISTS snowplow_intermediary.cookie_id_to_user_id_map (
-  domain_userid varchar(16),
+  domain_userid varchar(36),
   inferred_user_id varchar(255) encode runlength -- Most identitiy stitching models will infer the user_id
 )
 DISTSTYLE KEY

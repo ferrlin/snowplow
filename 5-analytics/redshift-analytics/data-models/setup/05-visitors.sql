@@ -27,7 +27,7 @@ CREATE TABLE IF NOT EXISTS snowplow_pivots.visitors (
   time_engaged_with_minutes double precision,
 
   landing_page_host varchar(255) encode text255,
-  landing_page_path varchar(1000) encode text32k,
+  landing_page_path varchar(3000) encode text32k,
 
   mkt_source varchar(255) encode text255,
   mkt_medium varchar(255) encode text255,
@@ -39,7 +39,7 @@ CREATE TABLE IF NOT EXISTS snowplow_pivots.visitors (
   refr_medium varchar(25) encode text255,
   refr_term varchar(255) encode raw,
   refr_urlhost varchar(255) encode text255,
-  refr_urlpath varchar(1000) encode text32k
+  refr_urlpath varchar(3000) encode text32k
 )
 DISTSTYLE KEY
 DISTKEY (blended_user_id)

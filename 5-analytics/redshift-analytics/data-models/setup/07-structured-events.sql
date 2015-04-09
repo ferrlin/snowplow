@@ -17,15 +17,15 @@
 CREATE TABLE IF NOT EXISTS snowplow_pivots.structured_events (
   blended_user_id varchar(255) encode runlength,
   inferred_user_id varchar(255) encode runlength,
-  domain_userid varchar(16),
+  domain_userid varchar(36),
   domain_sessionidx smallint,
   etl_tstamp timestamp,
   dvce_tstamp timestamp,
   collector_tstamp timestamp,
-  se_category varchar(255) encode text255,
-  se_action varchar(255) encode text255,
-  se_label varchar(255) encode text32k,
-  se_property varchar(255) encode text32k,
+  se_category varchar(1000) encode text32k,
+  se_action varchar(1000) encode text32k,
+  se_label varchar(1000) encode text32k,
+  se_property varchar(1000) encode text32k,
   se_value double precision
 )
 DISTSTYLE KEY
